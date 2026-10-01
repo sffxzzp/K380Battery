@@ -32,7 +32,7 @@ From the repository root, in the same PowerShell window:
 
 ```
 gcc main.c -o K380Battery-x64.exe -I include lib/x64/libhidapi.a -mconsole -s
-gcc main.c -o K380Battery-x86.exe -I include lib/x86/libhidapi.a -mwindows -s -m32
+gcc main.c -o K380Battery-x86.exe -I include lib/x86/libhidapi.a -mconsole -s -m32
 ```
 
 This links the HIDAPI library statically and requests static linking for GCC runtime libraries. The executable does not need `hidapi.dll` or GCC runtime DLLs beside it. Windows system libraries, including the UCRT, remain normal Windows imports. `-mconsole` keeps the console visible for the output and keypress prompt.
